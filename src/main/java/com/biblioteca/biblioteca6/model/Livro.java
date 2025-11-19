@@ -22,7 +22,12 @@ public class Livro {
         this.disponivel = false;
     }
 
-    public void devolver() {
+    public void devolver()
+    {
+
+        if (disponivel) {
+            throw new IllegalStateException("O livro já está disponível e não pode ser devolvido novamente.");
+        }
         this.disponivel = true;
     }
 
