@@ -57,22 +57,24 @@ O projeto foi desenvolvido com foco na qualidade do código, garantindo que cada
 -   **Usuario.java** -- Representa um usuário (base para extensões
     futuras);
 -   **BibliotecaService.java** -- contém a lógica de negócio;
--   **Testes** -- contém os 8 testes unitários.
+-   **Testes** -- contém os 9 testes unitários.
 
 ------------------------------------------------------------------------
 
 ## Casos de Teste Automatizados
 
-Os testes cobrem:
+# Resumo dos Testes da Biblioteca
 
-1.  Adicionar livros;
-2.  Buscar livro pelo título;
-3.  Lançar erro ao buscar livro inexistente
-4.  Emprestar livro disponível;
-5.  Erro ao emprestar livro já emprestado;
-6.  Devolver livro;
-7.  Verificar disponibilidade inicial;
-8.  Garantir que a quantidade total não muda;
+- **TesteAdicionarLivro** – Verifica se os livros são adicionados.  
+- **TesteBuscarLivro** – Verifica busca por título existente.  
+- **TesteBuscarLivroInexistente** – Verifica exceção ao buscar livro inexistente.  
+- **TesteEmprestarLivro** – Verifica se um livro pode ser emprestado.  
+- **TesteEmprestarIndisponivel** – Verifica exceção ao tentar emprestar livro já emprestado.  
+- **TesteDevolverLivro** – Verifica se um livro pode ser devolvido.  
+- **TesteDevolverLivroIndisponivel** – Verifica exceção ao tentar devolver livro já disponível.  
+- **TesteEstadoInicial** – Verifica se livro novo começa disponível.  
+- **TesteQuantidadeInalteradaAoEmprestar** – Verifica se a quantidade total de livros não muda ao emprestar.
+
 
 Todos os testes usam JUnit 5 e assertions como assertEquals, assertTrue, assertThrows, etc.
 
